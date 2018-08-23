@@ -3,7 +3,7 @@
 var spawn = require('child_process').spawn
 var path = require('path')
 
-var prog = path.resolve(process.argv[2])
+var prog = [path.resolve(process.argv[2]), ...process.argv.slice(3)]
 
 console.log('probing program', prog)
 
